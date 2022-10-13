@@ -9,6 +9,7 @@ import '../App.css';
 import Notfound from '../screens/notfound';
 import Login from '../screens/login';
 import Profile from '../screens/profile';
+import Dashboard from '../screens/dashboard';
 export default function Navbar() {
   return (
     <div>
@@ -23,6 +24,8 @@ export default function Navbar() {
         <Link className="link" to="gallery">Gallery</Link>
         <Link className="link" to="contact">Contact</Link>
         <Link className="link" to="login">Log in</Link>
+        <Link className="link" to="dashboard">DashBoard</Link>
+
         </div>
     </div>
 <Routes>
@@ -32,6 +35,8 @@ export default function Navbar() {
     <Route path="contact" element={<Contact />} />
     <Route path="login" element={<Login />} />
     <Route path="profile/:username" element={<Profile/>} />
+    <Route path="dashboard/*" element={< Dashboard/>} />
+
     <Route path="*" element={<Notfound/>} />
 </Routes>
    </Router>
